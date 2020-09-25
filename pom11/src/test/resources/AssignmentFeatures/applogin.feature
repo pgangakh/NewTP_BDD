@@ -2,7 +2,7 @@ Feature: I want to login to elearningm1
 This Feature include following feature
 1.Signup
 2.login
-3.ValidateMail
+3.validateMail
 
 Background:
 Given Elearing Application is launched
@@ -25,28 +25,21 @@ Examples:
 
 @login
 Scenario: login
-When I enter the username as "<user>"
-And I enter the Password as "<pwd>"
+When I enter the username as "pgangakh"
+And I enter the Password as "123priya@456"
 Then I should click on login button
 
-Examples:
-|user|pwd|
-|aaaaa|aaa|
 
 @validateMail
-Scenario: ValidateMail
-When I enter the username as "<user>"
-And I enter the Password as "<pwd>"
+Scenario: validateMail
+When I enter the username as "pgangakh"
+And I enter the Password as "123priya@456"
 Then I should click on login button
 
 When I click on Compose message button
 And I enter the Text on message section
 And I click on Send message button
-Then I should see acknowledgement
-
-Examples:
-|user|pwd|
-|aaaaa|aaa|
+Then I should see acknowledgement "The message has been sent to Priyanka Gangakhed"
 
 
 

@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src\\test\\resources\\projectApplogin\\applogin.feature"},glue= {"stepdefinition"},
-tags= "@login",
+tags= "@validateMail",
 dryRun= false ,
 monochrome = true , 
 strict = true , 
