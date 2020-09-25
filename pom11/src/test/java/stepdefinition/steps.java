@@ -86,8 +86,9 @@ public class steps {
 		   }
 
 		   @When("I enter the Text on message section")
-		   public void i_enter_the_text_on_message_section() {
+		   public void i_enter_the_text_on_message_section() throws InterruptedException {
 		      driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")).sendKeys("pgangakh@in.ibm.com");
+		      Thread.sleep(3000);
 		      driver.findElement(By.name("title")).sendKeys("Test Email");
 		      
 		   }
