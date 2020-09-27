@@ -1,8 +1,12 @@
 package stepdefinition;
 
+import java.awt.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -15,7 +19,7 @@ public class steps {
 	WebDriver driver;
 	@Before
 	public void beforetest() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\PriyankaGangakhed\\Desktop\\Reskill Progaram - All details\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\PriyankaGangakhed\\Desktop\\Reskill Progaram - All details\\Reskill Progaram - All details\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		}
@@ -87,21 +91,43 @@ public class steps {
 
 		   @When("I enter the Text on message section")
 		   public void i_enter_the_text_on_message_section() throws InterruptedException {
-		      driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")).sendKeys("pgangakh@in.ibm.com");
-		      Thread.sleep(3000);
+		      //driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")).click();
+		     // Select emailid =new Select driver.findElements(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")));
+		     // emailid = selectByVisibleText("pgangakh@in.ibm.com");
+			   
+			   /*WebElement email = driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input"));
+			   email.sendKeys("pgangakh@in.ibm.com");*/
+			   
+
+			   WebElement emailid= driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input"));
+			   java.util.List<WebElement> emailList=emailid.findElements(By.tagName("li"));
+			   for (WebElement li : emailList) {
+				   	if (li.getText().equals("Priyanka Gangakhed")) {
+				   		li.click();
+				   	}
+			   }
+
+
+			   
+			   
+			   
+			  Thread.sleep(3000);
 		      driver.findElement(By.name("title")).sendKeys("Test Email");
 		      
 		   }
-		   
-		   @When("I click on Send message button")
+	
+           @When("I click on Send message button")
 		   public void i_click_on_send_message_button() {
 			   driver.findElement(By.name("compose")).click();
 			   }
+		   
 
-		   @Then("I should see acknowledgement")
-		   public void i_should_see_acknowledgement() {
-			   boolean expected = driver.getPageSource().contains("The message has been sent to Priyanka Gangakhed (pgangakh)");
-		   }
+@Then("I should see acknowledgement {string}")
+public void i_should_see_acknowledgement(String string) {
+	boolean expected = driver.getPageSource().contains("The message has been sent to Priyanka Gangakhed (pgangakh)");
+System.out.println("Mail Acknowledged");
+}
+
 
 	}
 	

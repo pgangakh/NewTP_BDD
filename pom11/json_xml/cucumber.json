@@ -1,0 +1,163 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10719551500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Elearing Application is launched",
+            "match": {
+              "location": "stepdefinition.steps.elearing_application_is_launched()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-27T16:48:33.000Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6440642900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinition.steps.beforetest()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "validateMail",
+        "description": "",
+        "id": "i-want-to-login-to-elearningm1;validatemail",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 94512700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I enter the username as \"aaaaa\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"aaaaa\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepdefinition.steps.i_enter_the_username_as1(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49683700,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I enter the Password as \"aaa\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"aaa\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepdefinition.steps.i_enter_the_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7253393000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I should click on login button",
+            "match": {
+              "location": "stepdefinition.steps.i_should_click_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 77320048200,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I click on Compose message button",
+            "match": {
+              "location": "stepdefinition.steps.i_click_on_compose_message_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3209697100,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I enter the Text on message section",
+            "match": {
+              "location": "stepdefinition.steps.i_enter_the_text_on_message_section()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1647860000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I click on Send message button",
+            "match": {
+              "location": "stepdefinition.steps.i_click_on_send_message_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35781000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I should see acknowledgement \"The message has been sent to Priyanka Gangakhed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The message has been sent to Priyanka Gangakhed\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepdefinition.steps.i_should_see_acknowledgement(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateMail"
+          }
+        ]
+      }
+    ],
+    "name": "I want to login to elearningm1",
+    "description": "This Feature include following feature\n1.Signup\n2.login\n3.validateMail",
+    "id": "i-want-to-login-to-elearningm1",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/AssignmentFeatures/applogin.feature",
+    "tags": []
+  }
+]
