@@ -3,9 +3,11 @@ package stepdefinition;
 import java.awt.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import io.cucumber.java.Before;
@@ -91,28 +93,9 @@ public class steps {
 
 		   @When("I enter the Text on message section")
 		   public void i_enter_the_text_on_message_section() throws InterruptedException {
-		      //driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")).click();
-		     // Select emailid =new Select driver.findElements(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")));
-		     // emailid = selectByVisibleText("pgangakh@in.ibm.com");
-			   
-			   /*WebElement email = driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input"));
-			   email.sendKeys("pgangakh@in.ibm.com");*/
-			   
-
-			   WebElement emailid= driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input"));
-			   java.util.List<WebElement> emailList=emailid.findElements(By.tagName("li"));
-			   for (WebElement li : emailList) {
-				   	if (li.getText().equals("Priyanka Gangakhed")) {
-				   		li.click();
-				   	}
-			   }
-
-
-			   
-			   
-			   
-			  Thread.sleep(3000);
-		      driver.findElement(By.name("title")).sendKeys("Test Email");
+		    driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")).sendKeys("pga" + Keys.ENTER + Keys.ENTER);
+		 	Thread.sleep(3000);
+		    driver.findElement(By.name("title")).sendKeys("Test Email");
 		      
 		   }
 	

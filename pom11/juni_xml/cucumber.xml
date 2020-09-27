@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="107.305">
-    <testcase classname="I want to login to elearningm1" name="validateMail" time="106.86">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.517">
+    <testcase classname="I want to login to elearningm1" name="validateMail" time="25.254">
         <system-out><![CDATA[Given Elearing Application is launched......................................passed
 When I enter the username as "aaaaa"........................................passed
 And I enter the Password as "aaa"...........................................passed
