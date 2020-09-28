@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.545">
-    <testcase classname="I want to login to elearningm1" name="Signup" time="15.232">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="39.14">
+    <testcase classname="I want to login to elearningm1" name="validateMail" time="38.756">
         <system-out><![CDATA[Given Elearing Application is launched......................................passed
-When I click on Signup button...............................................passed
-And I enter the First name as "Priya14".....................................passed
-And I enter the Last name as "Ganga14"......................................passed
-And I enter the e-mail as "pgangakh@in.ibm.com".............................passed
-And I enter the Username as "priya14".......................................passed
-And I enter the Pass as "priya14"...........................................passed
-And I enter the confirm password as "priya14"...............................passed
-And I click on register button..............................................passed
-Then I should see the confirmationmessage "Dear Priya14 Ganga14,"...........passed
+When I enter the username as "priya14"......................................passed
+And I enter the Password as "priya14".......................................passed
+Then I should click on login button.........................................passed
+When I click on Compose message button......................................passed
+And I enter the Text on message section.....................................passed
+And I click on Send message button..........................................passed
+Then I should see acknowledgement "The message has been sent to Priyanka Gangakhed".passed
 ]]></system-out>
     </testcase>
 </testsuite>

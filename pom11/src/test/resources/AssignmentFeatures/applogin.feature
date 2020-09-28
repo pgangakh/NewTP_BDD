@@ -25,15 +25,15 @@ Examples:
 
 @login
 Scenario: login
-When I enter the username as "aaaaa"
-And I enter the Password as "aaa"
+When I enter the username as "priya14"
+And I enter the Password as "priya14"
 Then I should click on login button
 
 
 @validateMail
 Scenario: validateMail
-When I enter the username as "aaaaa"
-And I enter the Password as "aaa"
+When I enter the username as "priya14"
+And I enter the Password as "priya14"
 Then I should click on login button
 
 When I click on Compose message button
