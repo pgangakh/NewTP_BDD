@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4749281900,
+              "duration": 4105575300,
               "status": "passed"
             },
             "line": 8,
@@ -24,11 +24,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-09-27T17:55:30.932Z",
+        "start_timestamp": "2020-09-28T09:40:00.932Z",
         "before": [
           {
             "result": {
-              "duration": 5650210800,
+              "duration": 5618923400,
               "status": "passed"
             },
             "match": {
@@ -36,119 +36,167 @@
             }
           }
         ],
-        "line": 34,
-        "name": "validateMail",
+        "line": 24,
+        "name": "Signup",
         "description": "",
-        "id": "i-want-to-login-to-elearningm1;validatemail",
+        "id": "i-want-to-login-to-elearningm1;signup;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 83775700,
+              "duration": 1740394300,
               "status": "passed"
             },
-            "line": 35,
-            "name": "I enter the username as \"aaaaa\"",
+            "line": 12,
+            "name": "I click on Signup button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"aaaaa\"",
-                  "offset": 24
-                }
-              ],
-              "location": "stepdefinition.steps.i_enter_the_username_as1(java.lang.String)"
+              "location": "stepdefinition.steps.i_click_on_signup_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 49865700,
+              "duration": 62343000,
               "status": "passed"
             },
-            "line": 36,
-            "name": "I enter the Password as \"aaa\"",
+            "line": 13,
+            "name": "I enter the First name as \"Priya14\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"aaa\"",
+                  "val": "\"Priya14\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepdefinition.steps.i_enter_the_first_name_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46875200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I enter the Last name as \"Ganga14\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ganga14\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepdefinition.steps.i_enter_the_last_name_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63833900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I enter the e-mail as \"pgangakh@in.ibm.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"pgangakh@in.ibm.com\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepdefinition.steps.i_enter_the_e_mail_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62823100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I enter the Username as \"priya14\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"priya14\"",
                   "offset": 24
                 }
               ],
-              "location": "stepdefinition.steps.i_enter_the_password_as(java.lang.String)"
+              "location": "stepdefinition.steps.i_enter_the_username_as(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 5357263400,
+              "duration": 79787200,
               "status": "passed"
             },
-            "line": 37,
-            "name": "I should click on login button",
-            "match": {
-              "location": "stepdefinition.steps.i_should_click_on_login_button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5319005700,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "I click on Compose message button",
-            "match": {
-              "location": "stepdefinition.steps.i_click_on_compose_message_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3157695500,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "I enter the Text on message section",
-            "match": {
-              "location": "stepdefinition.steps.i_enter_the_text_on_message_section()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 724338500,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "I click on Send message button",
-            "match": {
-              "location": "stepdefinition.steps.i_click_on_send_message_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 52773000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "I should see acknowledgement \"The message has been sent to Priyanka Gangakhed\"",
+            "line": 17,
+            "name": "I enter the Pass as \"priya14\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"The message has been sent to Priyanka Gangakhed\"",
-                  "offset": 29
+                  "val": "\"priya14\"",
+                  "offset": 20
                 }
               ],
-              "location": "stepdefinition.steps.i_should_see_acknowledgement(java.lang.String)"
+              "location": "stepdefinition.steps.i_enter_the_pass_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61835200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I enter the confirm password as \"priya14\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"priya14\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepdefinition.steps.i_enter_the_confirm_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3273560200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I click on register button",
+            "match": {
+              "location": "stepdefinition.steps.i_click_on_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 24933000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I should see the confirmationmessage \"Dear Priya14 Ganga14,\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Dear Priya14 Ganga14,\"",
+                  "offset": 37
+                }
+              ],
+              "location": "stepdefinition.steps.i_should_see_the_confirmationmessage(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@validateMail"
+            "name": "@Signup"
           }
         ]
       }

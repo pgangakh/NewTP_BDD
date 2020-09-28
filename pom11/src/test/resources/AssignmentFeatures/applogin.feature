@@ -17,11 +17,11 @@ And I enter the Username as "<user>"
 And I enter the Pass as "<pwd>"
 And I enter the confirm password as "<cpwd>"
 And I click on register button
-Then I should see the confirmationmessage "Your personal settings have been registered"
+Then I should see the confirmationmessage "Dear <fname> <lname>,"
 
 Examples:
 |fname|lname|email|user|pwd|cpwd|
-|Priya|Ganga|pgangakh@in.ibm.com|priya|priya|priya|
+|Priya15|Ganga15|pgangakh@in.ibm.com|priya15|priya15|priya15|
 
 @login
 Scenario: login

@@ -1,13 +1,13 @@
 package stepdefinition;
 
-import java.awt.List;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import io.cucumber.java.Before;
@@ -67,8 +67,22 @@ public class steps {
 	}
 	@Then("I should see the confirmationmessage {string}")
 	public void i_should_see_the_confirmationmessage(String string) {
-	boolean expected = driver.getPageSource().contains("Your personal settings have been registered");
-    Assert.assertEquals(expected, string);
+	 
+		WebElement validateMsg = driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/p[1]"));
+		
+		String expectedText = "Dear Priya15 Ganga15,",
+		
+		actualText = validateMsg.getText();
+		
+		if(actualText.contains(expectedText))
+		{
+		 System.out.println("The message is matching " + actualText );
+		}
+		else
+		{
+			System.out.println("The message is not matching " + actualText );
+		}
+
 		   
 	}
 	
@@ -89,13 +103,18 @@ public class steps {
 		   @When("I click on Compose message button")
 		   public void i_click_on_compose_message_button() {
 			   driver.findElement(By.linkText("Compose")).click();  
+			   driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
 		   }
 
 		   @When("I enter the Text on message section")
 		   public void i_enter_the_text_on_message_section() throws InterruptedException {
-		    driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")).sendKeys("pga" + Keys.ENTER + Keys.ENTER);
-		 	Thread.sleep(3000);
-		    driver.findElement(By.name("title")).sendKeys("Test Email");
+			   
+		  
+		   driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+           driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li/input")).sendKeys("pgangakh@in.ibm.com" + Keys.ENTER);
+		   driver.findElement(By.xpath("/html/body/main/section/div/div[2]/div/div/div[2]/div/div[2]/form/fieldset/div[1]/div[1]/span/span[1]/span/ul/li[1]")).click();
+
+		   driver.findElement(By.name("title")).sendKeys("Test Email");
 		      
 		   }
 	
